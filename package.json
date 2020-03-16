@@ -1,0 +1,29 @@
+{
+  "name": "seminar-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run build && npm run development",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "development": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.1",
+    "@types/uuid": "^7.0.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "casual": "^1.6.2",
+    "express": "^4.17.1",
+    "uuid": "^7.0.2",
+    "validate": "git://github.com/DragonRaider5/validate.git#patch-1"
+  }
+}
