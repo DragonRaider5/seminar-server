@@ -1,8 +1,8 @@
 import * as express from 'express'
 import { json } from 'body-parser'
+import * as cors from 'cors'
 import * as casual from 'casual'
 import { v4 as uuid } from 'uuid'
-import { Readable } from 'stream'
 
 import { Todo, TodoStatus } from './types'
 import * as schemas from './schemas'
@@ -21,6 +21,8 @@ for (let i = 0; i < 10; i++) {
 }
 
 app.use(json())
+app.use(cors())
+
 app.get('/todos', (req, res) => {
   res.setHeader('Content-Type', 'application/json')
   res.setHeader('Transfer-Encoding', 'chunked')
